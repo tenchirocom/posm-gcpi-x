@@ -11,7 +11,14 @@ class Plugin(PluginBase):
     def app_mount_points(self):
         @login_required
         def gcpi(request):
-            return render(request, self.template_path("app.html"), {'title': 'GCP Editor'})
+            return render(
+                request,
+                self.template_path("app.html"),
+                {   'title': 'GCP Editor',
+                    'plugin_url': self.public_url("/"),
+                    'gcpi_url': self.public_url("/gcpi/index.html")
+                }
+            )
 
         return [
             MountPoint('$', gcpi)

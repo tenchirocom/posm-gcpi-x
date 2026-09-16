@@ -5,3 +5,4 @@ sample_data
 build
 app/node_modules/
 app/build/
+public/gcpi/

@@ -1,13 +1,13 @@
 {
-	"name": "POSM GCP Interface",
+	"name": "POSM GCP Interface - eXtended",
 	"webodmMinVersion": "0.5.0",
 	"description": "A plugin to create GCP files from images",
 	"version": "0.4.0",
-	"author": "Eric Brelsford, Piero Toffanin",
-	"email": "pt@masseranolabs.com",
-	"repository": "https://github.com/OpenDroneMap/WebODM",
+	"author": "Eric Brelsford, Piero Toffanin, Tenchiro",
+	"email": "dev@tenchiro.com",
+	"repository": "https://github.com/tenchirocom/posm-gcpi-x.git",
 	"tags": ["gcp", "posm"],
-	"homepage": "https://github.com/OpenDroneMap/WebODM",
+	"homepage": "https://www.tenchiro.com",
 	"experimental": true,
 	"deprecated": false
 }

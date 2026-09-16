@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import classNames from 'classnames';
+import _ from '../common/i18n'
 
 class ControlPoints extends Component {
 
@@ -10,7 +11,7 @@ class ControlPoints extends Component {
     });
 
     if (!points.length) return (
-      <li>No points...</li>
+      <li>{_("No points...")}</li>
     );
 
     return points.map((pt) => (
@@ -24,7 +25,7 @@ class ControlPoints extends Component {
     return (
       <div className='control-points-i'>
         <div>
-          <h3>Ground Control Points</h3>
+          <h3>{_("Ground Control Points")}</h3>
           <ul>
             {this.renderPoints()}
           </ul>

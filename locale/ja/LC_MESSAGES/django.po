@@ -1,0 +1,105 @@
+# International eXtended GCP Interface Locale
+# Copyright (C) 2026
+# This file is distributed under the same license as the PACKAGE package.
+# Tenchiro <devinfo@tenchiro.com>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-16 00:00+0000\n"
+"PO-Revision-Date: 2026-09-16 00:00+0000\n"
+"Last-Translator: Tenchiro <devinfo@tenchiro.com>\n"
+"Language-Team: Japanese <https://hosted.weblate.org/projects/webodm/webodm/"
+"ja/>\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 4.11-dev\n"
+
+#: app/src/components/ControlPoints.js
+msgid "Ground Control Point Interface"
+msgstr "地上基準点インターフェース"
+
+#: app/src/components/ControlPoints.js
+msgid "Ground Control Points"
+msgstr "地上基準点"
+
+#: app/src/components/ControlPoints.js
+msgid "No points..."
+msgstr "ポイントがありません..."
+
+#: app/src/components/ControlPoints.js
+msgid "Directions"
+msgstr "手順"
+
+#: app/src/components/ControlPoints.js
+msgid "Connect at least 5 high-contrast objects in 3 or more photos to their corresponding locations on the map."
+msgstr "3枚以上の写真にある、コントラストのはっきりした5つ以上のオブジェクトを、地図上の対応する位置に関連付けます。"
+
+#: app/src/components/ControlPoints.js
+msgid "	Upload images (jpeg or png)."
+msgstr "画像をアップロードしてください (jpeg または png)。"
+
+#: app/src/components/ControlPoints.js
+msgid "Set a point in an image."
+msgstr "画像上にポイントを設定します。"
+
+#: app/src/components/ControlPoints.js
+msgid "Set a corresponding point on the map."
+msgstr "地図上に対応するポイントを設定します。"
+
+#: app/src/components/ControlPoints.js
+msgid "Repeat as desired (at least until the goal is achieved)."
+msgstr "必要に応じて繰り返します（少なくとも目標が達成されるまで）。"
+
+#: app/src/components/ControlPoints.js
+msgid "Generate the ground control point file."
+msgstr "地上基準点ファイルを生成します。"
+
+#: app/src/components/ControlPoints.js
+msgid "Load existing Control Point File"
+msgstr "既存の地上基準点ファイルを読み込む"
+
+#: app/src/components/ControlPoints.js
+msgid "Choose images / drag here"
+msgstr "画像を選択 / ここにドラッグ"
+
+#: app/src/components/ControlPoints.js
+msgid "Export file"
+msgstr "ファイルをエクスポート"
+
+#: app/src/components/ControlPoints.js
+msgid "Search..."
+msgstr "検索..."
+
+#: app/src/components/ControlPoints.js
+msgid "Map Provider"
+msgstr "マッププロバイダ"
+
+#: app/src/components/ControlPoints.js
+msgid "OpenStreetMap"
+msgstr "OpenStreetMap"
+
+#: app/src/components/ControlPoints.js
+msgid "Satellite"
+msgstr "衛星画像"
+
+#: app/src/components/ControlPoints.js
+msgid "Custom"
+msgstr "カスタム"
+
+#: app/src/components/ControlPoints.js
+msgid "Zoom in"
+msgstr "拡大"
+
+#: app/src/components/ControlPoints.js
+msgid "Zoom out"
+msgstr "縮小"
+
+#: app/src/components/ControlPoints.js
+msgid "Fit markers..."
+msgstr "マーカーに合わせる..."
+
