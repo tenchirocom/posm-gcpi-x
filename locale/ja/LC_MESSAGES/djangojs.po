@@ -146,8 +146,8 @@ msgid "Zoom out"
 msgstr "縮小"
 
 #: app/src/components/Leaflet-Zoomcontrols.js
-msgid "Fit markers..."
-msgstr "マーカーに合わせる..."
+msgid "Fit markers"
+msgstr "マーカーに合わせる"
 
 #: app/src/components/LeafletMap-Providers-Control.js
 msgid "Custom"
