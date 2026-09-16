@@ -31,51 +31,101 @@ msgstr "地上基準点"
 msgid "No points..."
 msgstr "ポイントがありません..."
 
-#: app/src/components/ControlPoints.js
+#: app/src/components/Directions.js
 msgid "Directions"
 msgstr "手順"
 
-#: app/src/components/ControlPoints.js
+#: app/src/components/Directions.js
 msgid "Connect at least 5 high-contrast objects in 3 or more photos to their corresponding locations on the map."
 msgstr "3枚以上の写真にある、コントラストのはっきりした5つ以上のオブジェクトを、地図上の対応する位置に関連付けます。"
 
-#: app/src/components/ControlPoints.js
-msgid "	Upload images (jpeg or png)."
+#: app/src/components/Directions.js
+msgid "Upload images (jpeg or png)."
 msgstr "画像をアップロードしてください (jpeg または png)。"
 
-#: app/src/components/ControlPoints.js
+#: app/src/components/Directions.js
 msgid "Set a point in an image."
 msgstr "画像上にポイントを設定します。"
 
-#: app/src/components/ControlPoints.js
+#: app/src/components/Directions.js
 msgid "Set a corresponding point on the map."
 msgstr "地図上に対応するポイントを設定します。"
 
-#: app/src/components/ControlPoints.js
+#: app/src/components/Directions.js
 msgid "Repeat as desired (at least until the goal is achieved)."
 msgstr "必要に応じて繰り返します（少なくとも目標が達成されるまで）。"
 
-#: app/src/components/ControlPoints.js
+#: app/src/components/Directions.js
 msgid "Generate the ground control point file."
 msgstr "地上基準点ファイルを生成します。"
 
-#: app/src/components/ControlPoints.js
+#: app/src/components/Directions.js
 msgid "Load existing Control Point File"
 msgstr "既存の地上基準点ファイルを読み込む"
 
-#: app/src/components/ControlPoints.js
-msgid "Choose images / drag here"
-msgstr "画像を選択 / ここにドラッグ"
+#: app/src/components/ImageGetter.js
+msgid "<b>Choose images</b> / drag here"
+msgstr "<b>画像を選択</b> / ここにドラッグ"
 
-#: app/src/components/ControlPoints.js
+#: app/src/components/ExportButton.js
 msgid "Export file"
 msgstr "ファイルをエクスポート"
+
+#: app/src/components/ExportModal.js
+msgid "Ground control point file"
+msgstr ""
+
+#: app/src/components/Image.js
+msgid "selected"
+msgstr ""
+
+#: app/src/components/ExportModal.js
+msgid "Sorry copy is not working, please use Ctrl/Cmd+C to copy"
+msgstr "申し訳ありませんが、コピー機能が動作しないため、Ctrl/Cmd+C キーを使用してコピーしてください"
+
+#: app/src/components/ExportModal.js
+msgid "Invalid coordinate reference system. Please enter a valid <a href=\"http://proj4.org/\">proj.4</a> string."
+msgstr "無効な座標参照系です。有効な <a href=\"http://proj4.org/\">proj.4</a> 文字列を入力してください。"
+
+#: app/src/components/ExportModal.js
+msgid "Copy text with <strong>Ctrl / Cmd+C</strong> or"
+msgstr "<strong>Ctrl / Cmd+C</strong> でテキストをコピーするか、"
+
+#: app/src/components/ExportModal.js
+msgid "Save"
+msgstr "保存"
+
+#: app/src/components/ExportModal.js
+msgid "Copy"
+msgstr "コピー"
+
+#: app/src/components/FilePreview.js
+msgid "Ground control point file preview"
+msgstr ""
+
+#: app/src/components/FilePreview.js
+msgid "Cancel"
+msgstr ""
+
+#: app/src/components/FilePreview.js
+msgid "Load"
+msgstr ""
+
+#: app/src/components/ImagePanZoom.js
+#: app/src/components/PointMarkersMap.js
+msgid "Delete"
+msgstr ""
+
+#: app/src/components/ImagePanZoom.js
+msgid "Deselect"
+msgstr ""
 
 #: app/src/components/ControlPoints.js
 msgid "Search..."
 msgstr "検索..."
 
 #: app/src/components/ControlPoints.js
+#: app/src/components/LeafletMap-Providers-Control.js
 msgid "Map Provider"
 msgstr "マッププロバイダ"
 
@@ -87,19 +137,35 @@ msgstr "OpenStreetMap"
 msgid "Satellite"
 msgstr "衛星画像"
 
-#: app/src/components/ControlPoints.js
-msgid "Custom"
-msgstr "カスタム"
-
-#: app/src/components/ControlPoints.js
+#: app/src/components/Leaflet-Zoomcontrols.js
 msgid "Zoom in"
 msgstr "拡大"
 
-#: app/src/components/ControlPoints.js
+#: app/src/components/Leaflet-Zoomcontrols.js
 msgid "Zoom out"
 msgstr "縮小"
 
-#: app/src/components/ControlPoints.js
+#: app/src/components/Leaflet-Zoomcontrols.js
 msgid "Fit markers..."
 msgstr "マーカーに合わせる..."
+
+#: app/src/components/LeafletMap-Providers-Control.js
+msgid "Custom"
+msgstr "カスタム"
+
+#: app/src/components/LeafletMap-Providers-Control.js
+msgid "Enter a template string"
+msgstr ""
+
+#: app/src/components/LeafletMap-Providers-Control.js
+msgid "Enter"
+msgstr ""
+
+#: app/src/components/LeafletMap-Providers-Control.js
+msgid "Apply"
+msgstr ""
+
+#: app/src/components/PointMarkersMap.js
+msgid "Lock"
+msgstr ""
 

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import _ from '../common/i18n'
 
 export default class FilePreview extends Component {
   render () {
@@ -9,7 +10,7 @@ export default class FilePreview extends Component {
         <div className='bk' onClick={previewGcpFileCancel}/>
         <div className='inner'>
           <div className='head'>
-            <h3>Ground control point file preview</h3>
+            <h3>{_("Ground control point file preview")}</h3>
             <span className='icon' onClick={previewGcpFileCancel}><span>&times;</span></span>
           </div>
           <div className='output'>
@@ -20,11 +21,11 @@ export default class FilePreview extends Component {
             )}
             <textarea value={previewText} readOnly></textarea>
             <div className='actions'>
-              <button onClick={previewGcpFileCancel}>Cancel</button>
+              <button onClick={previewGcpFileCancel}>{_("Cancel")}</button>
               <button
                 disabled={errors.length > 0}
                 onClick={receiveGcpFile}
-              >Load</button>
+              >{_("Load")}</button>
             </div>
           </div>
         </div>

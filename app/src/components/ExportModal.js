@@ -6,6 +6,7 @@ import isEqual from 'lodash.isequal';
 import uniqWith from 'lodash.uniqwith';
 import { generateGcpOutput } from '../state/utils/controlpoints';
 import { getUtmZoneFromLatLng, getProj4Utm } from '../common/coordinate-systems';
+import _ from '../common/i18n'
 
 class ExportModal extends Component {
   constructor(props) {
@@ -44,7 +45,7 @@ class ExportModal extends Component {
         this.txtarea.blur();
       }
       catch (err) {
-        alert('Sorry copy is not working, please use Ctrl/Cmd+C to copy');
+        alert(_('Sorry copy is not working, please use Ctrl/Cmd+C to copy'));
       }
     }
   }
@@ -92,7 +93,7 @@ class ExportModal extends Component {
       exportText = this.renderGcpOutput(destinationProjection);
     }
     catch (e) {
-      error = <p>Invalid coordinate reference system. Please enter a valid <a href="http://proj4.org/">proj.4</a> string.</p>;
+      error = <p>{_('Invalid coordinate reference system. Please enter a valid <a href="http://proj4.org/">proj.4</a> string.')}</p>;
     }
     this.setState({ destinationProjection, error, exportText });
   }
@@ -119,7 +120,7 @@ class ExportModal extends Component {
         <div className='bk' onClick={(evt) => {this.props.onClick(evt);} }/>
         <div className='inner'>
           <div className='head'>
-            <h3>Ground control point file</h3>
+            <h3>{_("Ground control point file")}</h3>
             <span className='icon' onClick={(evt) => {this.props.onClick(evt);} }><span>&times;</span></span>
           </div>
           <div className='output'>
@@ -137,10 +138,10 @@ class ExportModal extends Component {
                 <textarea ref={el => {this.txtarea = el;}} readOnly value={exportText}/>
               </div>
               <div className='actions'>
-                <p>Copy text with <strong>Ctrl / Cmd+C</strong> or </p>
-                <button onClick={e => {this.copyText(e);}} disabled={!status.valid}>Copy</button>
+                <p>{_("Copy text with <strong>Ctrl / Cmd+C</strong> or ")} </p>
+                <button onClick={e => {this.copyText(e);}} disabled={!status.valid}>{_("Copy")}</button>
                 { this.isFileSaverSupported &&
-                <button onClick={e => {this.saveText(e);}} disabled={!status.valid}>Save</button>
+                <button onClick={e => {this.saveText(e);}} disabled={!status.valid}>{_("Save")}</button>
                 }
               </div>
             </div>

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import _ from '../common/i18n'
 
 class Directions extends Component {
   constructor(props) {
@@ -16,28 +17,28 @@ class Directions extends Component {
     const statusClass = this.state.isOpen ? '' : 'hidden';
     return (
       <div className={`directions ${statusClass}`}>
-        <h3 onClick={this.onClick}><span className='arrow'></span>Directions</h3>
+        <h3 onClick={this.onClick}><span className='arrow'></span>{_("Directions")}</h3>
         <div className='direction-content'>
-          <p>Connect at least 5 high-contrast objects in 3 or more photos to their corresponding locations on the map.</p>
+          <p>{_("Connect at least 5 high-contrast objects in 3 or more photos to their corresponding locations on the map.")}</p>
           <ol>
             <li>
               <span className='tc'><span className='circled'>1</span></span>
-              <span className='tc'>Upload images (jpeg or png).</span></li>
+              <span className='tc'>{_("Upload images (jpeg or png).")}</span></li>
             <li>
               <span className='tc'><span className='circled'>2</span></span>
-              <span className='tc'>Set a point in an image.</span>
+              <span className='tc'>{_("Set a point in an image.")}</span>
             </li>
             <li>
               <span className='tc'><span className='circled'>3</span></span>
-              <span className='tc'>Set a corresponding point on the map.</span>
+              <span className='tc'>{_("Set a corresponding point on the map.")}</span>
             </li>
             <li>
               <span className='tc'><span className='circled'>4</span></span>
-              <span className='tc'>Repeat as desired (at least until the goal is achieved).</span>
+              <span className='tc'>{_("Repeat as desired (at least until the goal is achieved).")}</span>
             </li>
             <li>
               <span className='tc'><span className='circled'>5</span></span>
-              <span className='tc'>Generate the ground control point file.</span>
+              <span className='tc'>{_("Generate the ground control point file.")}</span>
             </li>
           </ol>
         </div>

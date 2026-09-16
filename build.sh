@@ -16,6 +16,7 @@ cp -a app/build/. public/gcpi/
 for lang_dir in locale/*/; do
     if [ -f "${lang_dir}LC_MESSAGES/django.po" ]; then
         msgfmt "${lang_dir}LC_MESSAGES/django.po" -o "${lang_dir}LC_MESSAGES/django.mo"
+        msgfmt "${lang_dir}LC_MESSAGES/djangojs.po" -o "${lang_dir}LC_MESSAGES/djangojs.mo"
         echo "Compiled locale for: $(basename "$lang_dir")"
     fi
 done

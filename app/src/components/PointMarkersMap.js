@@ -1,6 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import L from 'leaflet';
 import { CP_TYPES, joinedPoints } from '../state/utils/controlpoints';
+import _ from '../common/i18n'
 
 const ICON = {
   className: 'image-point',
@@ -70,11 +71,14 @@ const GCPIcon = L.DivIcon.extend({
 
     let actions = L.DomUtil.create('div', 'actions', div);
     let ul = L.DomUtil.create('ul', '', actions);
-    ['Delete', 'Lock'].forEach(d => {
-      let li = L.DomUtil.create('li', d.toLowerCase(), ul);
+    [
+      { key: 'delete', label: _('Delete') },
+      { key: 'lock', label: _('Lock') }
+    ].forEach(item => {
+      let li = L.DomUtil.create('li', item.key, ul);
       let a = L.DomUtil.create('a', '', li);
-      a.setAttribute('data-action', d.toLowerCase());
-      a.innerHTML = d;
+      a.setAttribute('data-action', item.key);
+      a.innerHTML = item.label;
       a.href = '#';
     });
 

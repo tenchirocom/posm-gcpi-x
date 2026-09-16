@@ -3,6 +3,7 @@ import classNames from 'classnames';
 import Image from './Image';
 import { CP_TYPES, CP_MODES, joinedPoints } from '../state/utils/controlpoints';
 import config from '../config';
+import _ from '../common/i18n'
 
 // https://github.com/rexxars/react-element-pan/blob/master/src/element-pan.js
 class ImagePanZoom extends Component {
@@ -526,11 +527,11 @@ class ImagePanZoom extends Component {
           <div className='actions'>
             <ul>
               <li>
-                <a className='action' href='#' onClick={(evt) => {this.onActionDelete(evt, marker);}}>Delete</a>
+                <a className='action' href='#' onClick={(evt) => {this.onActionDelete(evt, marker);}}>{_("Delete")}</a>
               </li>
               {marker.isAutomatic ? (
                 <li>
-                  <a className='action' href='#' onClick={(evt) => {this.onActionLock(evt, marker);}}>Deselect</a>
+                  <a className='action' href='#' onClick={(evt) => {this.onActionLock(evt, marker);}}>{_("Deselect")}</a>
                 </li>
               ) : null}
             </ul>

@@ -1,5 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import ImageLoader from 'blueimp-load-image';
+import _ from '../common/i18n'
 
 class Image extends Component {
 
@@ -80,7 +81,7 @@ class Image extends Component {
     if (!srcToDisplay) return null;
 
     return (
-      <img src={srcToDisplay} className={`image-panzoom orientation${orientation}`} width={width} height={height} style={{ width: width + 'px', height: height +'px' }} alt='selected' onLoad={this.onInternalImageLoad}/>
+      <img src={srcToDisplay} className={`image-panzoom orientation${orientation}`} width={width} height={height} style={{ width: width + 'px', height: height +'px' }} alt={_('selected')} onLoad={this.onInternalImageLoad}/>
     );
   }
 }

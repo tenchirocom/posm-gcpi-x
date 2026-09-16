@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Dropzone from 'react-dropzone';
+import _ from '../common/i18n'
 
 const DROPZONE_STYLE_ACTIVE = { borderStyle: 'solid', backgroundColor: '#eee' };
 const DROPZONE_STYLE_REJECT = { borderStyle: 'solid', backgroundColor: '#ffdddd' };
@@ -93,7 +94,7 @@ class ImagesGetter extends Component {
               activeStyle={DROPZONE_STYLE_ACTIVE}
               rejectStyle={DROPZONE_STYLE_REJECT}
               accept='image/jpeg,image/png'>
-              <div><b>Choose images</b> / drag here</div>
+              <div>{_("<b>Choose images</b> / drag here")}</div>
             </Dropzone>
           </div>
         </aside>

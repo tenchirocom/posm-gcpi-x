@@ -42,7 +42,7 @@ class Plugin(PluginBase):
             return render(
                 request,
                 self.template_path("app.html"),
-                {   'title': 'GCP Editor',
+                {   'title': _('GCP Editor'),
                     'plugin_url': self.public_url("/"),
                     'gcpi_url': self.public_url("/gcpi/index.html")
                 }

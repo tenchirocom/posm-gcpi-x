@@ -1,6 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import L from 'leaflet';
 import { CP_TYPES } from '../state/utils/controlpoints';
+import _ from '../common/i18n'
 
 class LeafletZoomControls extends Component {
   static propTypes = {
@@ -53,9 +54,9 @@ class LeafletZoomControls extends Component {
     return (
       <div className='leaflet-zoom-controls'>
         <div className='leaflet-control-zoom leaflet-bar leaflet-control'>
-          <a className='leaflet-control-zoom-in' href='#' title='Zoom in' onClick={()=>{this.onZoomIn();}} >+</a>
-          <a className='leaflet-control-zoom-out' href='#' title='Zoom out' onClick={()=>{this.onZoomOut();}} >-</a>
-          <a className='leaflet-control-fit-bounds' href='#' title='Fit markers' onClick={()=>{this.onFitMarkers();}} ><span className='icon fit-marker' role='presentation'/></a>
+          <a className='leaflet-control-zoom-in' href='#' title={_("Zoom in")} onClick={(e)=>{e.preventDefault(); this.onZoomIn();}} >+</a>
+          <a className='leaflet-control-zoom-out' href='#' title={_("Zoom out")} onClick={(e)=>{e.preventDefault(); this.onZoomOut();}} >-</a>
+          <a className='leaflet-control-fit-bounds' href='#' title={_("Fit markers")} onClick={(e)=>{e.preventDefault(); this.onFitMarkers();}} ><span className='icon fit-marker' role='presentation'/></a>
         </div>
       </div>
     );

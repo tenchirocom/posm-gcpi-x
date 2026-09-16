@@ -1,3 +1,5 @@
+import _ from '../common/i18n'
+
 ;(function (factory) {
   var L;
   if (typeof module !== 'undefined') {
@@ -53,11 +55,14 @@
 
     options: {
       providers: [],
-      custom_desc: 'Enter a template string',
+      custom_desc: null,
       initial_open: false
     },
 
     initialize: function (options) {
+      if (!options.custom_desc) {
+        options.custom_desc = _('Enter a template string');
+      }
       L.Util.setOptions(this, options);
 
       this.state = {
@@ -91,7 +96,7 @@
       input.value = 'custom';
 
       let txt = L.DomUtil.create('span', null, label);
-      txt.innerHTML = 'Custom';
+      txt.innerHTML = _('Custom');
 
       let custom_container = L.DomUtil.create('div', null, label);
       let desc = L.DomUtil.create('p', '', custom_container);
@@ -99,10 +104,10 @@
 
       let custom_input = L.DomUtil.create('input', 'input', custom_container);
       custom_input.type = 'text';
-      custom_input.placeholder = 'Enter';
+      custom_input.placeholder = _('Enter');
 
       let apply_btn = L.DomUtil.create('button', 'btn', custom_container);
-      apply_btn.innerHTML = 'Apply';
+      apply_btn.innerHTML = _('Apply');
 
       L.DomEvent
         .on(apply_btn, 'click', e => {
@@ -132,7 +137,7 @@
       let icon = L.DomUtil.create('span', 'icon providers', h4);
       icon.setAttribute('role', 'presentation');
       let h4_text = L.DomUtil.create('span', '', h4);
-      h4_text.innerHTML = 'Map Provider';
+      h4_text.innerHTML = _('Map Provider');
 
       let ul = L.DomUtil.create('ul', 'list-reset', container);
 
