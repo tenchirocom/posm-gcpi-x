@@ -3,3 +3,5 @@ sample_data
 *.ai
 *.log
 build
+app/node_modules/
+app/build/
