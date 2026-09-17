@@ -10,7 +10,8 @@ class LeafletZoomControls extends Component {
   }
 
   static defaultProps = {
-    leafletMap: null
+    leafletMap: null,
+    controlpoints: { points: [] }
   }
 
   onZoomIn() {

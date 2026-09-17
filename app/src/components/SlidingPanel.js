@@ -3,7 +3,8 @@ import React, { Component, PropTypes } from 'react';
 
 class SlidingPanel extends Component {
   static propTypes = {
-    panelOpen: PropTypes.bool.isRequired
+    panelOpen: PropTypes.bool.isRequired,
+    height: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
   }
 
   static defaultProps = {

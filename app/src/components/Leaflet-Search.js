@@ -2,6 +2,7 @@ import { Component } from 'react';
 
 import L from 'leaflet';
 import 'leaflet-control-geocoder';
+import _ from '../common/i18n'
 
 class LeafletSearch extends Component {
   constructor(props) {
@@ -20,7 +21,8 @@ class LeafletSearch extends Component {
 
   initializeSearch(map) {
     let options = {
-      defaultMarkGeocode: false
+      defaultMarkGeocode: false,
+      placeholder: _("Search...")
     };
 
     L.Control.geocoder(options)

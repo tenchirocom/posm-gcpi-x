@@ -61,10 +61,10 @@ class ImagesGetter extends Component {
     const { imagery } = this.props;
 
     let hasGCPFile = imagery.gcp_list_name ? true : false;
-    let elm = <div>Load existing Control Point File</div>;
+    let elm = <div>{_("Load existing Control Point File")}</div>;
 
     if (hasGCPFile) {
-      elm = <div>GCP file loaded: <b>{imagery.gcp_list_name}</b></div>;
+      elm = <div>{_("GCP file loaded:")} <b>{imagery.gcp_list_name}</b></div>;
     }
     return elm;
   }
@@ -94,7 +94,7 @@ class ImagesGetter extends Component {
               activeStyle={DROPZONE_STYLE_ACTIVE}
               rejectStyle={DROPZONE_STYLE_REJECT}
               accept='image/jpeg,image/png'>
-              <div>{_("<b>Choose images</b> / drag here")}</div>
+              <div><b>{_("Choose images")}</b> / {_("drag here")}</div>
             </Dropzone>
           </div>
         </aside>

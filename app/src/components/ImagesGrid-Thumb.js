@@ -5,6 +5,7 @@ import ImageLoader from 'blueimp-load-image';
 class ImagesGridThumb extends Component {
   static propTypes = {
     src: PropTypes.object,
+    filename: PropTypes.string,
     onThumbClick: PropTypes.func,
     onDeleteImage: PropTypes.func,
     selected: PropTypes.bool,
@@ -13,6 +14,7 @@ class ImagesGridThumb extends Component {
 
   static defaultProps = {
     src: null,
+    filename: '',
     onThumbClick: () => {},
     onDeleteImage: () => {},
     selected: false,

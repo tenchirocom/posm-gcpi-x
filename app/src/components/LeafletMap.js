@@ -36,7 +36,7 @@ class LeafletMap extends Component {
 
     const prevAutomaticImagePoints = this.props.controlpoints.points.filter(p => p.type === CP_TYPES.IMAGE && p.isAutomatic);
     const nextAutomaticImagePoints = nextProps.controlpoints.points.filter(p => p.type === CP_TYPES.IMAGE && p.isAutomatic);
-    if (nextAutomaticImagePoints.length > 0 && prevAutomaticImagePoints.length === 0) {
+    if (nextAutomaticImagePoints.length > 0 && prevAutomaticImagePoints.length === 0 && this.state.leafletMap) {
       const center = this.state.leafletMap.getCenter();
       this.props.addAutomaticControlPoint([center.lat, center.lng]);
     }

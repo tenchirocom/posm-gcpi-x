@@ -255,7 +255,7 @@ class PointMarkersMap extends Component {
 
   deleteMarkers(markers, points) {
     const { leafletMap } = this.props;
-    if (!leafletMap) return;
+    if (!leafletMap) return markers;
 
     const hash = this.createLookup(points);
 
@@ -273,7 +273,7 @@ class PointMarkersMap extends Component {
 
   addMarkers(markers, points) {
     const { leafletMap } = this.props;
-    if (!leafletMap) return;
+    if (!leafletMap) return markers;
 
     const hash = this.createLookup(markers);
 
