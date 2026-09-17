@@ -64,7 +64,7 @@ class ImagesGetter extends Component {
     let elm = <div>{_("Load existing Control Point File")}</div>;
 
     if (hasGCPFile) {
-      elm = <div>{_("GCP file loaded:")} <b>{imagery.gcp_list_name}</b></div>;
+      elm = <div>{_("GCP file loaded")}: <b>{imagery.gcp_list_name}</b></div>;
     }
     return elm;
   }

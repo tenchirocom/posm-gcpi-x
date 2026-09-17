@@ -138,7 +138,7 @@ class ExportModal extends Component {
                 <textarea ref={el => {this.txtarea = el;}} readOnly value={exportText}/>
               </div>
               <div className='actions'>
-                <p>{_("Copy text with <strong>Ctrl / Cmd+C</strong> or ")} </p>
+                <p>{_("Copy text with %(shortcut)s or", { shortcut: "<strong>Ctrl / Cmd+C</strong>" })} </p>
                 <button onClick={e => {this.copyText(e);}} disabled={!status.valid}>{_("Copy")}</button>
                 { this.isFileSaverSupported &&
                 <button onClick={e => {this.saveText(e);}} disabled={!status.valid}>{_("Save")}</button>

@@ -2,6 +2,8 @@ import proj4 from 'proj4';
 import flattenDeep from 'lodash.flattendeep';
 import toPairs from 'lodash.topairs';
 import uniq from 'lodash.uniq';
+import React from 'react';
+import _ from '../../common/i18n'
 
 export const CP_TYPES = {
   MAP: 'map',
@@ -114,9 +116,22 @@ export const validate = (points, joins) => {
   let errors = [];
 
   if (points.length === 0){
-    errors.push('There are no ground control points to export.');
+    errors.push(_('There are no ground control points to export.'));
   }else if (points.length < 15) {
-    errors.push('A ground control point file should have a minimum of 15 points. There needs to be 5 control objects and each control object must have 3 image points referenced. Please see this <a href="https://github.com/OpenDroneMap/OpenDroneMap/wiki/Running-OpenDroneMap#running-odm-with-ground-control" target="_blank">article</a> for more information.');
+    errors.push(_(
+      'A ground control point file should have a minimum of 15 points. There needs to be 5 control objects and each control object must have 3 image points referenced. Please see this %(articleLink)s for more information.',
+      {
+        articleLink: (
+          <a 
+            href="https://github.com/OpenDroneMap/OpenDroneMap/wiki/Running-OpenDroneMap#running-odm-with-ground-control" 
+            target="_blank" 
+            rel="noopener noreferrer"
+          >
+            {_('article')}
+          </a>
+        )
+      }
+    ));
   }
 
   let mapPoints = points.filter(pt => pt.type === CP_TYPES.MAP);
@@ -125,15 +140,15 @@ export const validate = (points, joins) => {
   let validObjects = joinKeys.filter(d => d.length >= 3);
 
   if (imgPointsLength < 9) {
-    errors.push('It\'s recommended to have at least 10 image points.');
+    errors.push(_('It\'s recommended to have at least 10 image points.'));
   }
 
   if (mapPoints.length < 5) {
-    errors.push('Seems you have enough image points but not enough control objects. There should be at least 5.');
+    errors.push(_('Seems you have enough image points but not enough control objects. There should be at least 5.'));
   } else if (joinKeys.length < 5) {
-    errors.push('There should be at least 5 control points that have image points referenced.');
+    errors.push(_('There should be at least 5 control points that have image points referenced.'));
   } else if (validObjects.length < 5) {
-    errors.push('Control objects should have at least 3 image points referenced.');
+    errors.push(_('Control objects should have at least 3 image points referenced.'));
   }
 
   return {

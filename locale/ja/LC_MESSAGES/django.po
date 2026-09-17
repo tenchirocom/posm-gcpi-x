@@ -35,6 +35,50 @@ msgstr "ポイントがありません..."
 msgid "Directions"
 msgstr "手順"
 
+#: app/src/components/ExportModal.js
+msgid "Ground control point file"
+msgstr "地上基準点ファイル"
+
+#: app/src/components/ExportModal.js
+msgid "Copy text with %(shortcut)s or"
+msgstr "%(shortcut)s または"
+
+#: app/src/state/utils/controlpoints.js
+msgid "There are no ground control points to export."
+msgstr "エクスポートする地上基準点がありません。"
+
+#: app/src/state/utils/controlpoints.js
+msgid "A ground control point file should have a minimum of 15 points. There needs to be 5 control objects and each control object must have 3 image points referenced. Please see this %(articleLink)s for more information."
+msgstr "地上基準点ファイルには、最低15個のポイントが必要です。5つのコントロールオブジェクトが必要であり、各コントロールオブジェクトには3つの画像ポイントが参照されている必要があります。詳細については、こちらの%(articleLink)sをご覧ください。"
+
+#: app/src/state/utils/controlpoints.js
+msgid "It's recommended to have at least 10 image points."
+msgstr "画像ポイントは10個以上持つことが推奨されます。"
+
+#: app/src/state/utils/controlpoints.js
+msgid "Seems you have enough image points but not enough control objects. There should be at least 5."
+msgstr "画像ポイントは足りているようですが、コントロールオブジェクトが不足しています。少なくとも5つ必要です。"
+
+#: app/src/state/utils/controlpoints.js
+msgid "There should be at least 5 control points that have image points referenced."
+msgstr "画像ポイントが参照されているコントロールオブジェクトが少なくとも5つ必要です。"
+
+#: app/src/state/utils/controlpoints.js
+msgid "Control objects should have at least 3 image points referenced."
+msgstr "各コントロールオブジェクトには、少なくとも3つの画像ポイントが参照されている必要があります。"
+
+#: app/src/components/FilePreview.js
+msgid "Ground control point file preview"
+msgstr "地上基準点ファイルのプレビュー"
+
+#: app/src/components/FilePreview.js
+msgid "Load"
+msgstr "読み込み"
+
+#: app/src/components/ImagesGetter.js
+msgid "GCP file loaded"
+msgstr "GCP ファイルを読み込みました"
+
 #: app/src/components/ControlPoints.js
 msgid "Connect at least 5 high-contrast objects in 3 or more photos to their corresponding locations on the map."
 msgstr "3枚以上の写真にある、コントラストのはっきりした5つ以上のオブジェクトを、地図上の対応する位置に関連付けます。"

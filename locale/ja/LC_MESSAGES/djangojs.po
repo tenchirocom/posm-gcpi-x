@@ -77,11 +77,11 @@ msgstr "ファイルをエクスポート"
 
 #: app/src/components/ExportModal.js
 msgid "Ground control point file"
-msgstr ""
+msgstr "地上基準点ファイル"
 
 #: app/src/components/Image.js
 msgid "selected"
-msgstr ""
+msgstr "選択済み"
 
 #: app/src/components/ExportModal.js
 msgid "Sorry copy is not working, please use Ctrl/Cmd+C to copy"
@@ -90,10 +90,6 @@ msgstr "申し訳ありませんが、コピー機能が動作しないため、
 #: app/src/components/ExportModal.js
 msgid "Invalid coordinate reference system. Please enter a valid <a href=\"http://proj4.org/\">proj.4</a> string."
 msgstr "無効な座標参照系です。有効な <a href=\"http://proj4.org/\">proj.4</a> 文字列を入力してください。"
-
-#: app/src/components/ExportModal.js
-msgid "Copy text with <strong>Ctrl / Cmd+C</strong> or"
-msgstr "<strong>Ctrl / Cmd+C</strong> でテキストをコピーするか、"
 
 #: app/src/components/ExportModal.js
 msgid "Save"
@@ -105,24 +101,56 @@ msgstr "コピー"
 
 #: app/src/components/FilePreview.js
 msgid "Ground control point file preview"
-msgstr ""
+msgstr "地上基準点ファイルのプレビュー"
 
 #: app/src/components/FilePreview.js
 msgid "Cancel"
-msgstr ""
+msgstr "キャンセル"
+
+#: app/src/components/ExportModal.js
+msgid "Copy text with %(shortcut)s or"
+msgstr "%(shortcut)s または"
+
+#: app/src/state/utils/controlpoints.js
+msgid "There are no ground control points to export."
+msgstr "エクスポートする地上基準点がありません。"
+
+#: app/src/state/utils/controlpoints.js
+msgid "A ground control point file should have a minimum of 15 points. There needs to be 5 control objects and each control object must have 3 image points referenced. Please see this %(articleLink)s for more information."
+msgstr "地上基準点ファイルには、最低15個のポイントが必要です。5つのコントロールオブジェクトが必要であり、各コントロールオブジェクトには3つの画像ポイントが参照されている必要があります。詳細については、こちらの%(articleLink)sをご覧ください。"
+
+#: app/src/state/utils/controlpoints.js
+msgid "It's recommended to have at least 10 image points."
+msgstr "画像ポイントは10個以上持つことが推奨されます。"
+
+#: app/src/state/utils/controlpoints.js
+msgid "Seems you have enough image points but not enough control objects. There should be at least 5."
+msgstr "画像ポイントは足りているようですが、コントロールオブジェクトが不足しています。少なくとも5つ必要です。"
+
+#: app/src/state/utils/controlpoints.js
+msgid "There should be at least 5 control points that have image points referenced."
+msgstr "画像ポイントが参照されているコントロールオブジェクトが少なくとも5つ必要です。"
+
+#: app/src/state/utils/controlpoints.js
+msgid "Control objects should have at least 3 image points referenced."
+msgstr "各コントロールオブジェクトには、少なくとも3つの画像ポイントが参照されている必要があります。"
 
 #: app/src/components/FilePreview.js
 msgid "Load"
-msgstr ""
+msgstr "読み込み"
+
+#: app/src/components/ImagesGetter.js
+msgid "GCP file loaded"
+msgstr "GCP ファイルを読み込みました"
 
 #: app/src/components/ImagePanZoom.js
 #: app/src/components/PointMarkersMap.js
 msgid "Delete"
-msgstr ""
+msgstr "削除"
 
 #: app/src/components/ImagePanZoom.js
 msgid "Deselect"
-msgstr ""
+msgstr "選択解除"
 
 #: app/src/components/Leaflet-Search.js
 msgid "Search..."
@@ -159,25 +187,25 @@ msgstr "カスタム"
 
 #: app/src/components/LeafletMap-Providers-Control.js
 msgid "Enter a template string"
-msgstr ""
+msgstr "テンプレート文字列を入力してください"
 
 #: app/src/components/LeafletMap-Providers-Control.js
 msgid "Enter"
-msgstr ""
+msgstr "入力"
 
 #: app/src/components/LeafletMap-Providers-Control.js
 msgid "Apply"
-msgstr ""
+msgstr "適用"
 
 #: app/src/components/PointMarkersMap.js
 msgid "Lock"
-msgstr ""
+msgstr "ロック"
 
 #: app/src/config.js
 msgid "Enter template url..."
-msgstr ""
+msgstr "テンプレートURLを入力..."
 
 #: app/src/config.js
 msgid "Enter a tile URL template. Valid tokens are {z}, {x}, {y}, for Z/X/Y scheme and {u} for quadtile scheme."
-msgstr ""
+msgstr "タイルURLテンプレートを入力してください。有効なトークンは、Z/X/Yスキームの場合は {z}、{x}、{y}、クアッドタイルスキームの場合は {u} です。"
 
