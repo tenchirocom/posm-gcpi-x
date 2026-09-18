@@ -112,6 +112,7 @@ class ExportModal extends Component {
     const { controlpoints } = this.props;
     const { status } = controlpoints;
     const { destinationProjection, error, exportText } = this.state;
+    const parts = _("Copy text with %(shortcut)s or").split("%(shortcut)s");
 
     return (
       <div className={classNames('export-modal', 'modal-dialog', {
@@ -138,7 +139,7 @@ class ExportModal extends Component {
                 <textarea ref={el => {this.txtarea = el;}} readOnly value={exportText}/>
               </div>
               <div className='actions'>
-                <p>{_("Copy text with %(shortcut)s or", { shortcut: "<strong>Ctrl / Cmd+C</strong>" })} </p>
+                <p>{parts[0]}<strong>Ctrl / Cmd+C</strong>{parts[1]}</p>
                 <button onClick={e => {this.copyText(e);}} disabled={!status.valid}>{_("Copy")}</button>
                 { this.isFileSaverSupported &&
                 <button onClick={e => {this.saveText(e);}} disabled={!status.valid}>{_("Save")}</button>
