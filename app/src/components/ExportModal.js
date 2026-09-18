@@ -142,7 +142,7 @@ class ExportModal extends Component {
                 <p>{parts[0]}<strong>Ctrl / Cmd+C</strong>{parts[1]}</p>
                 <button onClick={e => {this.copyText(e);}} disabled={!status.valid}>{_("Copy")}</button>
                 { this.isFileSaverSupported &&
-                <button onClick={e => {this.saveText(e);}} disabled={!status.valid}>{_("Save")}</button>
+                <button onClick={e => {this.saveText(e);}} disabled={!status.valid}>{_("Download")}</button>
                 }
               </div>
             </div>

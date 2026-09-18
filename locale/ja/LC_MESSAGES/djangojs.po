@@ -35,29 +35,49 @@ msgstr "ポイントがありません..."
 msgid "Directions"
 msgstr "手順"
 
-#: app/src/components/Directions.js
+#: app/components/Directions.js
 msgid "Connect at least 5 high-contrast objects in 3 or more photos to their corresponding locations on the map."
-msgstr "3枚以上の写真にある、コントラストのはっきりした5つ以上のオブジェクトを、地図上の対応する位置に関連付けます。"
+msgstr "3枚以上の写真にある5つ以上の高コントラストなオブジェクトを、地図上の対応する位置に接続します。"
 
-#: app/src/components/Directions.js
-msgid "Upload images (jpeg or png)."
-msgstr "画像をアップロードしてください (jpeg または png)。"
+#: app/components/Directions.js
+msgid "First, load the GCP file and images:"
+msgstr "まず、GCPファイルと画像を読み込みます:"
 
-#: app/src/components/Directions.js
-msgid "Set a point in an image."
-msgstr "画像上にポイントを設定します。"
+#: app/components/Directions.js
+msgid "USING THE LEFT DROP ZONE: Upload a GCP file containing a list of the names of the high-contrast objects, latitude, longitude, and elevation separated by commas. The first line should be the coordinate reference system identifier (CRS). I.e. 'EPSG:4326'."
+msgstr "左側のドロップゾーンを使用: 高コントラストなオブジェクト名、緯度、経度、標高をカンマ区切りでリスト化したGCPファイルをアップロードします。1行目は座標参照系識別子（CRS）である必要があります（例: 'EPSG:4326'）。"
 
-#: app/src/components/Directions.js
-msgid "Set a corresponding point on the map."
-msgstr "地図上に対応するポイントを設定します。"
+#: app/components/Directions.js
+msgid "USING THE RIGHT DROP ZONE: Upload a sample of images (jpeg or png) used in the photogrammetry task that clearly show the high-contrast markers specified in the GCP file in step (1)."
+msgstr "右側のドロップゾーンを使用: ステップ(1)のGCPファイルで指定された高コントラストなマーカーが明確に写っている、フォトグラメトリータスクで使用するサンプルの画像（jpegまたはpng）をアップロードします。"
 
-#: app/src/components/Directions.js
-msgid "Repeat as desired (at least until the goal is achieved)."
-msgstr "必要に応じて繰り返します（少なくとも目標が達成されるまで）。"
+#: app/components/Directions.js
+msgid "Then, for each image, select the image. And for each marker in the image:"
+msgstr "次に、各画像を選択し、画像内の各マーカーに対して以下を行います:"
 
-#: app/src/components/Directions.js
-msgid "Generate the ground control point file."
-msgstr "地上基準点ファイルを生成します。"
+#: app/components/Directions.js
+msgid "USING IMAGE ON THE LEFT: Set a point on the visible marker."
+msgstr "左側の画像を使用: 表示されているマーカーにポイントを設定します。"
+
+#: app/components/Directions.js
+msgid "USING THE MAP ON THE RIGHT: With the image point still selected, select the corresponding map marker."
+msgstr "右側の地図を使用: 画像ポイントを選択した状態で、地図上の対応するマーカーを選択します。"
+
+#: app/components/Directions.js
+msgid "REPEAT steps 3 and 4 as needed (at least until the constraints are achieved). If a mistake is made, delete the invalid points and redo as necessary."
+msgstr "必要に応じてステップ3と4を繰り返します（制約が満たされるまで）。誤りがあった場合は、無効なポイントを削除して必要に応じてやり直してください。"
+
+#: app/components/Directions.js
+msgid "Finally:"
+msgstr "最後に:"
+
+#: app/components/Directions.js
+msgid "EXPORT NEW GCP FILE: Generate a new GCP file using the export button at the top left. Download the file in your browser or copy and paste into a new file on your computer."
+msgstr "新しいGCPファイルの書き出し: 左上の書き出しボタンを使用して新しいGCPファイルを生成します。ブラウザでファイルをダウンロードするか、パソコン上の新しいファイルにコピー＆ペーストしてください。"
+
+#: app/components/Directions.js
+msgid "USING THE NEW GCP FILE: Include this file in a new photogrammetry task along with the necessary images."
+msgstr "新しいGCPファイルの使用: 必要な画像とともに、このファイルを新しいフォトグラメトリータスクに含めます。"
 
 #: app/src/components/ImageGetter.js
 msgid "Load existing Control Point File"
@@ -92,8 +112,8 @@ msgid "Invalid coordinate reference system. Please enter a valid <a href=\"http:
 msgstr "無効な座標参照系です。有効な <a href=\"http://proj4.org/\">proj.4</a> 文字列を入力してください。"
 
 #: app/src/components/ExportModal.js
-msgid "Save"
-msgstr "保存"
+msgid "Download"
+msgstr "ダウンロード"
 
 #: app/src/components/ExportModal.js
 msgid "Copy"
@@ -208,4 +228,8 @@ msgstr "テンプレートURLを入力..."
 #: app/src/config.js
 msgid "Enter a tile URL template. Valid tokens are {z}, {x}, {y}, for Z/X/Y scheme and {u} for quadtile scheme."
 msgstr "タイルURLテンプレートを入力してください。有効なトークンは、Z/X/Yスキームの場合は {z}、{x}、{y}、クアッドタイルスキームの場合は {u} です。"
+
+#: app/src/components/buttons/AddPoint.js
+msgid "Click on the image or map to add a point."
+msgstr "画像またはマップをクリックしてポイントを追加します。"
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import _ from '../../common/i18n'
 
 const AddPoint = (props) => {
     return (
@@ -10,7 +11,7 @@ const AddPoint = (props) => {
           </svg>
         </button>
         <div className='helper'>
-          <p>Click on the image or map to add a point.</p>
+          <p>{_('Click on the image or map to add a point.')}</p>
         </div>
 
       </div>
