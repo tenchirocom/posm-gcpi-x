@@ -4,6 +4,8 @@ The ground control interface as distributed with the current version of WebODM i
 
 Currently, the source to the posm-gcpi is not included in the default WebODM distribution, but distributed in a separate package. This extended version merges the plugin source together with the actual posm-gcpi app source in one directory for easier maintenance.
 
+The original source can be found at <a href="https://github.com/OpenDroneMap/posm-gcpi">OpenDroneMap.posm-gcpi:master</a> and has been modified by Tenchiro. Modifications are licensed under the same license as ODM.
+
 ## To Use
 
 - Install the plugin in the /<webodm dir>/coreplugins/posm-gcpi-x directory.
