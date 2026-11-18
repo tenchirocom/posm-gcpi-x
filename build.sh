@@ -3,7 +3,7 @@ set -e
 
 cd app
 
-npm install
+npm install --no-audit --no-fund
 npm run build
 
 cd ..
